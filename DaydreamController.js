@@ -9,9 +9,7 @@ function DaydreamController() {
 	function connect() {
 
 		return navigator.bluetooth.requestDevice( {
-			filters: [ {
-				name: 'SC-B03-87B6'
-			} ],
+			acceptAllDevices: true,
 			optionalServices: [ 0xfe55 ]
 		} )
 		.then( function ( device ) {
