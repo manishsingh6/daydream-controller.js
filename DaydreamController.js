@@ -10,7 +10,7 @@ function DaydreamController() {
 
 		return navigator.bluetooth.requestDevice( {
 			filters: [ {
-				name: 'Daydream controller'
+				namePrefix: 'SC-B03'
 			} ],
 			optionalServices: [ 0xfe55 ]
 		} )
